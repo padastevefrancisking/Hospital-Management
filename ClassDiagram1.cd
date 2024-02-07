@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="EDPThing.Hospital">
+    <Position X="14.25" Y="0.5" Width="3" />
+    <AssociationLine Name="PatientRecords" Type="EDPThing.PatientRecord" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="1.688" />
+        <Point X="17.625" Y="1.688" />
+        <Point X="17.625" Y="2.369" />
+        <Point X="19" Y="2.369" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAEAAAAAAAQAAEAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Hospital.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Appointments" />
+      <Property Name="EmployeeRecords" />
+      <Property Name="PatientRecords" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EDPThing.MedicalAppointment">
+    <Position X="10.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAACAA=</HashCode>
+      <FileName>MedicalAppointment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EDPThing.Patient">
+    <Position X="21.75" Y="2.75" Width="2.25" />
+    <InheritanceLine Type="EDPThing.Person" FixedFromPoint="true">
+      <Path>
+        <Point X="21.25" Y="5.688" />
+        <Point X="21.442" Y="5.688" />
+        <Point X="21.442" Y="4.029" />
+        <Point X="21.75" Y="4.029" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EDPThing.PatientRecord">
+    <Position X="19" Y="1.75" Width="2.5" />
+    <AssociationLine Name="Transaction" Type="EDPThing.TransactionType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20.062" Y="1.75" />
+        <Point X="20.062" Y="1.023" />
+        <Point X="19.5" Y="1.023" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Patient" Type="EDPThing.Patient" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.5" Y="2.25" />
+        <Point X="23.125" Y="2.25" />
+        <Point X="23.125" Y="2.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACCAAAAEAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PatientRecord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Transaction" />
+      <Property Name="Status" />
+      <Property Name="Patient" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AdministeringStaff" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EDPThing.Person">
+    <Position X="19.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAQAQAACAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EDPThing.Staff">
+    <Position X="16.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAQAAAACgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EDPThing.StaffRecord">
+    <Position X="13.5" Y="2.75" Width="1.75" />
+    <AssociationLine Name="Employee" Type="EDPThing.Staff" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.25" Y="5.074" />
+        <Point X="14.25" Y="5.686" />
+        <Point X="16.25" Y="5.686" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAQAAAAAAAAAAGAAAAAAAAAAQAAAIAAA=</HashCode>
+      <FileName>StaffRecord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Employee" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="EDPThing.ConditionStatus">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConditionStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EDPThing.TimeStatus">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimeStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EDPThing.TransactionType">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransactionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
